@@ -1,0 +1,13 @@
+{
+  "name": "drinkingcast",
+  "version": "0.0.1",
+  "description": "A drinking game using airconsole",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b9a9s9/DrinkingCast.git"
+  },
+  "keywords": [
+    "game"
+  ]
+}
