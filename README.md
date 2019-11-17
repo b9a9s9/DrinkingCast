@@ -1,2 +1,2 @@
 # DrinkingCast
-A drinking game for chromecast. TBD
+A drinking game for chromecast.
