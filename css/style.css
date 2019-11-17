@@ -2,24 +2,3 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
-button {
-    height: 150px;
-    width: 150px;
-    margin: 2em;
-    border-radius: 100%;
-    background-color: lightgray;
-    border: none;
-}
-
-.container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.flex {
-    display: flex;
-}
