@@ -2,6 +2,7 @@
   "name": "DrinkingCast",
   "version": "0.0.1",
   "description": "A drinking game for chromecast.(temporary name, ready still WIP)",
+  "main":"index.vue",
   "author": "",
   "private": true,
   "scripts": {
