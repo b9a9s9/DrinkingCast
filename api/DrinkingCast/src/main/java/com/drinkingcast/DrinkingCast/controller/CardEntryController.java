@@ -10,10 +10,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.drinkingcast.DrinkingCast.model.CardEntry;
+import com.drinkingcast.DrinkingCast.repository.CardEntryRepository;
+import com.drinkingcast.DrinkingCast.repository.CardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CardEntryController {
 
     @Autowired
@@ -34,5 +42,9 @@ public class CardEntryController {
     }
 
     @GetMapping("")
+    @PostMapping("/cardEntry")
+    public CardEntry createCardEntry(@Valid @RequestBody CardEntry cardentry)  {
+        return cardEntryRepository.save(cardentry);
+    }
 
 }
