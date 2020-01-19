@@ -1,1 +1,1 @@
-web: npm install && npm run start
+web: \api\DrinkingCast\mvn spring-boot:run
