@@ -1,0 +1,1 @@
+web: \api\DrinkingCast\mvn spring-boot:run
