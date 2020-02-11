@@ -1,7 +1,7 @@
 <template>
   <section>
     <div style="text-align: center">
-    <img src="https://cdn.discordapp.com/attachments/648842340273750026/675728343584342039/Structure.png" alt="Logo">
+      <img src="https://cdn.discordapp.com/attachments/648842340273750026/675728343584342039/Structure.png" alt="Logo">
     </div>
 
     <div class="has-text-centered" style="margin: 100px">
@@ -12,8 +12,7 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-export default Vue.extend({
+export default {
   name: 'index' as string,
 
   data: () =>  {
@@ -21,7 +20,7 @@ export default Vue.extend({
       loading: false as boolean
     }
   }
-})
+}
 
 </script>
 
@@ -29,5 +28,8 @@ export default Vue.extend({
   img{
     height: 250px;
     margin: 50px;
+  }
+  html{
+    background: sienna;
   }
 </style>
