@@ -3,7 +3,7 @@ const express = require('express')
 const Http = require("http").Server(express)
 const Socketio = require("socket.io")(Http)
 
-var clients = []
+let clients = []
 
 Http.listen(3100, () => {
   console.log("Listening at :3100...");
@@ -12,12 +12,12 @@ Http.listen(3100, () => {
 Socketio.on("connection", socket => {
   socket.on('addClient', function (data) {
 
-    interface Clientinfo {
+    interface ClientInfo {
       gameId: string,
       clientId: string
     }
 
-    var client:Clientinfo = {
+    let client:ClientInfo = {
       gameId: data.gameId,
       clientId: socket.id
     }
