@@ -1,0 +1,12 @@
+@import "~bulma/sass/utilities/_all";
+
+$dimensions: 16 24 32 48 64 96 128 256 400 512;
+
+
+.has-margin-50{
+  margin: 50px;
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+

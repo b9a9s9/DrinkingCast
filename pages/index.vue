@@ -1,11 +1,11 @@
 <template>
-  <section>
-    <div style="text-align: center">
+  <section class="container has-text-centered">
+    <figure class="image is-400x400 is-inline-block has-margin-50">
       <img src="https://cdn.discordapp.com/attachments/648842340273750026/675728343584342039/Structure.png" alt="Logo">
-    </div>
+    </figure>
 
-    <div class="has-text-centered" style="margin: 100px">
-      <b-button class="is-rounded is-large" icon-left="" tag="nuxt-link" to="/">Host</b-button>
+    <div class="container">
+      <b-button class="is-primary is-rounded is-large" icon-left="" tag="nuxt-link" to="/">Host</b-button>
       <b-button class="is-rounded is-large" icon-left="" tag="nuxt-link" to="/">Join</b-button>
     </div>
   </section>
@@ -14,22 +14,13 @@
 <script lang="ts">
 export default {
   name: 'index' as string,
-
-  data: () =>  {
-    return {
-      loading: false as boolean
-    }
-  }
 }
 
 </script>
 
 <style lang="scss">
-  img{
-    height: 250px;
-    margin: 50px;
-  }
   html{
-    background: sienna;
+    background: #6b2510;
   }
+
 </style>
