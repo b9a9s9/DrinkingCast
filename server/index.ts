@@ -13,8 +13,8 @@ Socketio.on("connection", socket => {
   socket.on('addClient', function (data) {
 
     interface Clientinfo {
-      gameId: String,
-      clientId: String
+      gameId: string,
+      clientId: string
     }
 
     var client:Clientinfo = {
