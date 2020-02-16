@@ -18,7 +18,7 @@ Http.listen(3100, () =>
 
 Socketio.on('connection', (socket: any) =>
 {
-  socket.on('addClient', function (data: any)
+  socket.on('addClient', function (data: ClientInfo)
   {
 
     let client: ClientInfo = {
