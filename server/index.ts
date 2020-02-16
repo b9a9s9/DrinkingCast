@@ -1,31 +1,35 @@
-const express = require('express')
+const express = require('express');
 // const app = express()
-const Http = require("http").Server(express)
-const Socketio = require("socket.io")(Http)
+const Http = require('http').Server(express);
+const Socketio = require('socket.io')(Http);
 
-let clients = []
+export interface ClientInfo
+{
+  gameId: string,
+  clientId: string
+}
 
-Http.listen(3100, () => {
-  console.log("Listening at :3100...");
-})
+let clients: ClientInfo[] = [];
 
-Socketio.on("connection", socket => {
-  socket.on('addClient', function (data) {
+Http.listen(3100, () =>
+{
+  console.log('Listening at :3100...');
+});
 
-    interface ClientInfo {
-      gameId: string,
-      clientId: string
-    }
+Socketio.on('connection', (socket: any) =>
+{
+  socket.on('addClient', function (data: any)
+  {
 
-    let client:ClientInfo = {
+    let client: ClientInfo = {
       gameId: data.gameId,
       clientId: socket.id
-    }
-    clients.push(client)
-    console.clear()
-    console.log(clients)
-  })
-})
+    };
+    clients.push(client);
+    console.clear();
+    console.log(clients);
+  });
+});
 
 
 // //socket action
