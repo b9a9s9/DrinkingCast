@@ -2,8 +2,16 @@
 
 $dimensions: 16 24 32 48 64 96 128 256 400 512;
 
+$primary: #573b2d;
+$primary-invert: findColorInvert($primary);
 
-.has-margin-50{
+$size-large: $size-3;
+
+$colors: (
+    "primary": ($primary, $primary-invert),
+);
+
+.has-margin-50 {
   margin: 50px;
 }
 
