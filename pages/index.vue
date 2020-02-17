@@ -7,14 +7,13 @@
 
     <div class="columns buttons is-centered">
       <div class="column is-narrow is-narrow-mobile">
-        <b-button class="is-rounded is-large" icon-left="" tag="nuxt-link" to="/">Join</b-button>
+        <b-button class="is-rounded is-large" icon-left="" tag="nuxt-link" to="/join_game">Join</b-button>
       </div>
 
       <div class="column is-narrow is-narrow-mobile">
-        <b-button class="is-rounded is-large is-primary" icon-left="" tag="nuxt-link" to="/">Host</b-button>
+        <b-button class="is-rounded is-large is-primary" icon-left="" tag="nuxt-link" to="/host_game">Host</b-button>
       </div>
     </div>
-
   </section>
 </template>
 
