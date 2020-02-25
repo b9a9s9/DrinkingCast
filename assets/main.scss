@@ -11,10 +11,6 @@ $colors: (
     "primary": ($primary, $primary-invert),
 );
 
-.has-margin-50 {
-  margin: 50px;
-}
-
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 
