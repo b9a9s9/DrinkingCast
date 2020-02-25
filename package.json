@@ -2,7 +2,7 @@
   "name": "DrinkingCast",
   "version": "0.0.1",
   "description": "A drinking game for chromecast.(temporary name, ready still WIP)",
-  "main":"index.vue",
+  "main": "index.vue",
   "author": "",
   "private": true,
   "scripts": {
@@ -12,8 +12,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
     "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {}
 }
