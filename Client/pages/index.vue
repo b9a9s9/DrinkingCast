@@ -1,50 +1,39 @@
 <template>
-  <div class="wrapper">
-    <nuxt-link to="/screen">
-      <button>Create Game</button>
-    </nuxt-link>
-    <nuxt-link to="/controller">
-      <button>Join Game</button>
-    </nuxt-link>
-  </div>
+  <section class="section has-text-centered">
+
+    <div class="container">
+      <figure class="image is-256x256 is-inline-block">
+        <img src="https://cdn.discordapp.com/attachments/648842340273750026/675728343584342039/Structure.png"
+             alt="Logo">
+      </figure>
+
+      <div class="columns buttons is-centered has-margin-top-50">
+        <div class="column is-narrow is-narrow-mobile">
+          <b-button class="is-rounded is-large" icon-left="" tag="nuxt-link" to="/join_game">Join</b-button>
+        </div>
+
+        <div class="column is-narrow is-narrow-mobile">
+          <b-button class="is-rounded is-large is-primary" icon-left="" tag="nuxt-link" to="/host_game">Host</b-button>
+        </div>
+      </div>
+    </div>
+
+  </section>
 </template>
 
-<script>
-import axios from 'axios'
-import io from "socket.io-client";
+<script lang="ts">
+  export default {
+    name: 'index' as string,
+  };
 
-export default {
-  name: 'index'
-}
 </script>
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+<style lang="scss">
+  html {
+    background: #6b2510;
   }
-  input {
-    display: block;
-    margin: .5em 0;
+  .has-margin-top-50{
+    margin-top: 50px
   }
-  button {
-    margin: 2em;
-  }
-  .columns {
-    display: flex;
-  }
-  .column {
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid;
-  }
-  .wrapper {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-  }
+
 </style>

@@ -1,1 +1,1 @@
-web: \api\DrinkingCast\mvn spring-boot:run
+web: npm run start
