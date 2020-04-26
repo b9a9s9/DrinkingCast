@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1>ID: {{ game_id }}</h1>
     <div class="buttons">
       <button @click="addCard">add</button>
       <button @click="deleteCard">delete</button>
+      <h1>ID: {{ game_id }}</h1>
     </div>
     <p style="position: fixed; top: 30px; left: 0;">
      {{ cards.length }}
     </p>
     <ul>
-      <transition-group name="item">
-        <Card v-for="card in cards" v-bind:key="card" :rotate="transforms[card]"></Card>
+      <transition-group name="fade">
+        <Card v-for="card in cards" :key="card" :id="card" :rotate="transforms[card]"></Card>
       </transition-group>
     </ul>
   </div>
@@ -47,8 +47,9 @@ export default Vue.extend({
         this.transforms.push((360/amountOfCards) * (i + 1));
       }
     },
-    addCard(): void {
-      let lastCard: number = (this.cards.length - 1) + 1;
+    addCard() {
+      var lastCard = this.cards.length;
+      console.log(lastCard);
       this.cards.push(lastCard);
       this.getTransformPerCard(this.cards.length);
     },
@@ -68,5 +69,12 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
+.buttons {
+  display: flex;
+  position: fixed;
+  top: 0; left: 0;
+}
+button {
+  margin: .2em .5em
+}
 </style>
