@@ -1,0 +1,26 @@
+{
+  "name": "drinkingcast-server",
+  "version": "1.0.0",
+  "description": "Socket server for Drinkingcast",
+  "main": "index.js",
+  "watch": {
+    "build": "npm run build /*.ts"
+  },
+  "scripts": {
+    "start": "npm run build && node index.js",
+    "dev": "npm run watch && node index.js",
+    "build": "tsc index.ts",
+    "watch": "npm-watch build"
+  },
+  "author": "Dennis Frijlink, Bas van Eck",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "npm-watch": "^0.6.0",
+    "typescript": "^3.7.5"
+  }
+}
